@@ -1,0 +1,9 @@
+C:\Users\Dima\source\repos\BlazorR\Shared\bin\Debug\netstandard2.1\BlazorR.Shared.deps.json
+C:\Users\Dima\source\repos\BlazorR\Shared\bin\Debug\netstandard2.1\BlazorR.Shared.dll
+C:\Users\Dima\source\repos\BlazorR\Shared\bin\Debug\netstandard2.1\BlazorR.Shared.pdb
+C:\Users\Dima\source\repos\BlazorR\Shared\obj\Debug\netstandard2.1\BlazorR.Shared.csprojAssemblyReference.cache
+C:\Users\Dima\source\repos\BlazorR\Shared\obj\Debug\netstandard2.1\BlazorR.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Dima\source\repos\BlazorR\Shared\obj\Debug\netstandard2.1\BlazorR.Shared.AssemblyInfoInputs.cache
+C:\Users\Dima\source\repos\BlazorR\Shared\obj\Debug\netstandard2.1\BlazorR.Shared.AssemblyInfo.cs
+C:\Users\Dima\source\repos\BlazorR\Shared\obj\Debug\netstandard2.1\BlazorR.Shared.dll
+C:\Users\Dima\source\repos\BlazorR\Shared\obj\Debug\netstandard2.1\BlazorR.Shared.pdb
