@@ -34,8 +34,11 @@ namespace BlazoR
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
@@ -43,7 +46,7 @@ namespace BlazoR
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -71,6 +74,45 @@ namespace BlazoR
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
+
+            CreateAdminRole(serviceProvider).Wait();
+        }
+
+        public async Task CreateAdminRole(IServiceProvider serviceProvider)
+        {
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            string[] roleNames = { "admin" };
+            IdentityResult roleResult;
+
+            foreach (var roleName in roleNames)
+            {
+                var roleExist = await RoleManager.RoleExistsAsync(roleName);
+                if (!roleExist)
+                {
+                    roleResult = await RoleManager.CreateAsync(new IdentityRole { Name = roleName });
+                }
+            }
+
+            var admin = new IdentityUser()
+            {
+                Email = Configuration["AdminLogin"],
+                UserName = Configuration["AdminLogin"],
+                EmailConfirmed = true
+            };
+
+            string adminPassword = Configuration["AdminPassword"];
+
+            var createdAdmin = await UserManager.FindByNameAsync(Configuration["AdminLogin"]);
+
+            if (createdAdmin == null)
+            {
+                var createPowerUser = await UserManager.CreateAsync(admin, adminPassword);
+                if (createPowerUser.Succeeded)
+                {
+                    await UserManager.AddToRoleAsync(admin, "admin");
+                }
+            }
         }
     }
 }

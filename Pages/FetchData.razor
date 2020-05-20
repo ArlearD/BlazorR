@@ -13,6 +13,10 @@
         <a href="authentication/login">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
+
+<AuthorizeView Roles="admin">
+    Hello adm
+</AuthorizeView>
 <p>This component demonstrates fetching data from a service.</p>
 
 @if (forecasts == null)
