@@ -48,7 +48,7 @@
     }
 
     Task Send() =>
-        hubConnection.SendAsync("SendMessage", "admin", messageInput);
+        hubConnection.SendAsync("SendChatMessage", "admin", messageInput);
 
     public bool IsConnected =>
         hubConnection.State == HubConnectionState.Connected;
