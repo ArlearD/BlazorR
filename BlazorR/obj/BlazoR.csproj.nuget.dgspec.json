@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.csproj": {}
+    "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazorR\\BlazoR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.csproj": {
+    "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazorR\\BlazoR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.csproj",
+        "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazorR\\BlazoR.csproj",
         "projectName": "BlazoR",
-        "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.csproj",
+        "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazorR\\BlazoR.csproj",
         "packagesPath": "C:\\Users\\Dima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\obj\\",
+        "outputPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazorR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dima\\AppData\\Roaming\\NuGet\\NuGet.Config",
