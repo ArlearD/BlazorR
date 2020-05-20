@@ -21,12 +21,19 @@ namespace BlazoR.Hubs
             await Clients.Group(who).SendAsync("ReceiveMessage", name, message);
         }
 
-        public override Task OnConnectedAsync()
+        public async Task JoinInGroup()
         {
             string name = Context.User.Identity.Name;
 
-            Groups.AddToGroupAsync(Context.ConnectionId, name);
-            return base.OnConnectedAsync();
+            await Groups.AddToGroupAsync(Context.ConnectionId, name);
         }
+
+        //public override Task OnConnectedAsync()
+        //{
+        //    string name = Context.User.Identity.Name;
+
+        //    Groups.AddToGroupAsync(Context.ConnectionId, name);
+        //    return base.OnConnectedAsync();
+        //}
     }
 }

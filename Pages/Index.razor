@@ -45,6 +45,7 @@
         });
 
         await hubConnection.StartAsync();
+        await hubConnection.SendAsync("JoinInGroup");
     }
 
     Task Send() =>
