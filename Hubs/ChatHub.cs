@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,11 @@ namespace BlazoR.Hubs
         {
             string name = Context.User.Identity.Name;
 
-            await Groups.AddToGroupAsync(Context.ConnectionId, name);
+            if (name == "admin@gmail.com")
+            {
+                await Groups.AddToGroupAsync(Context.ConnectionId, "admin");
+            }
+
         }
 
         //public override Task OnConnectedAsync()
