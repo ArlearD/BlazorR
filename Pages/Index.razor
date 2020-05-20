@@ -4,12 +4,6 @@
 
 <div class="form-group">
     <label>
-        User:
-        <input @bind="userInput" />
-    </label>
-</div>
-<div class="form-group">
-    <label>
         Message:
         <input @bind="messageInput" size="50" />
     </label>
@@ -28,7 +22,6 @@
 @code {
     private HubConnection hubConnection;
     private List<string> messages = new List<string>();
-    private string userInput;
     private string messageInput;
 
     protected override async Task OnInitializedAsync()
@@ -45,11 +38,10 @@
         });
 
         await hubConnection.StartAsync();
-        await hubConnection.SendAsync("JoinInGroup");
     }
 
     Task Send() =>
-        hubConnection.SendAsync("SendChatMessage", "admin", messageInput);
+        hubConnection.SendAsync("SendMessage", messageInput);
 
     public bool IsConnected =>
         hubConnection.State == HubConnectionState.Connected;
