@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.Data\\BlazoR.Data.csproj",
-      "projectName": "BlazoR.Data",
-      "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.Data\\BlazoR.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Domain\\BlazoR.Domain.csproj",
+      "projectName": "BlazoR.Domain",
+      "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Domain\\BlazoR.Domain.csproj",
       "packagesPath": "C:\\Users\\Dima\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.Data\\obj\\",
+      "outputPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dima\\AppData\\Roaming\\NuGet\\NuGet.Config",

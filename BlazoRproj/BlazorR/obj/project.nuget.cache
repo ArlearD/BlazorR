@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vQMJA2kqaZLrBZM0GMxUKpk8u6Xq8HZVRV+AmClDIIOngOMEJdKv50i8HYCfUQhp9qBqyvpSQiHX98N+lGr1Pw==",
+  "dgSpecHash": "hmkPzxC7GKhMe4RXWaHHoaRnKiLzAFTP2Gr1TK8zISLKb82mcbdyHEWczP9QEtVZHELgfl9ZU4NVgpgNjEM5Kg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazorR\\BlazoR.csproj",
+  "projectFilePath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazorR\\BlazoR.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.4\\microsoft.aspnetcore.connections.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
