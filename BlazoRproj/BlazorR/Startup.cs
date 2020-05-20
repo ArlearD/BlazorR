@@ -1,18 +1,18 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
+using BlazoR.Areas.Identity;
+using BlazoR.Data;
+using BlazoR.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using BlazoR.Areas.Identity;
-using BlazoR.Hubs;
-using Microsoft.AspNetCore.ResponseCompression;
-using BlazoR.Data;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace BlazoR
 {

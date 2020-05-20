@@ -1,0 +1,9 @@
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\bin\Debug\netcoreapp3.1\BlazoR.Domain.deps.json
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\bin\Debug\netcoreapp3.1\BlazoR.Domain.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\bin\Debug\netcoreapp3.1\BlazoR.Domain.pdb
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\obj\Debug\netcoreapp3.1\BlazoR.Domain.csprojAssemblyReference.cache
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\obj\Debug\netcoreapp3.1\BlazoR.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\obj\Debug\netcoreapp3.1\BlazoR.Domain.AssemblyInfoInputs.cache
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\obj\Debug\netcoreapp3.1\BlazoR.Domain.AssemblyInfo.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\obj\Debug\netcoreapp3.1\BlazoR.Domain.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Domain\obj\Debug\netcoreapp3.1\BlazoR.Domain.pdb
