@@ -10,20 +10,9 @@ namespace BlazoR.Hubs
     [Authorize]
     public class ChatHub : Hub
     {
-        public void SendMessage(string who, string message)
+        public async Task SendMessage(string user, string message)
         {
-            string name = Context.User.Identity.Name;
-
-            Clients.Group(who).SendAsync(name + ": " + message);
-        }
-
-        public override Task OnConnectedAsync()
-        {
-            string name = Context.User.Identity.Name;
-
-            Groups.AddToGroupAsync(Context.ConnectionId, name);
-
-            return base.OnConnectedAsync();
+            await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
     }
 }
