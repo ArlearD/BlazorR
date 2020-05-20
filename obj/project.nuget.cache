@@ -1,14 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "6AXA2kJHsp9bLdyzvBga2j3GzUCNwKlQhXr+OdrEPhMrIMd7NzDdAwzBRIhQKZ2ZvE0UwqWBm90LLNEqe0Sobg==",
+  "dgSpecHash": "LNxBJXB0QNsvxJQK/2iQNpFqSX7ePIwRZ549FOJKWo+MIzbLSc82wslCQB0h8Hbbp3qKbPLvQwx4PRhIhUFdyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoR.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.4\\microsoft.aspnetcore.connections.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.4\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.4\\microsoft.aspnetcore.http.connections.client.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\3.1.4\\microsoft.aspnetcore.http.connections.common.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.4\\microsoft.aspnetcore.http.features.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.4\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\3.1.4\\microsoft.aspnetcore.identity.ui.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\3.1.4\\microsoft.aspnetcore.signalr.client.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\3.1.4\\microsoft.aspnetcore.signalr.client.core.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\3.1.4\\microsoft.aspnetcore.signalr.common.3.1.4.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\3.1.4\\microsoft.aspnetcore.signalr.protocols.json.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -39,7 +47,9 @@
     "C:\\Users\\Dima\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
-    "C:\\Users\\Dima\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\Dima\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }
