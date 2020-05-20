@@ -9,9 +9,19 @@ namespace BlazoR.Hubs
 {
     public class ChatHub : Hub
     {
-        public async Task SendMessage(string user, string message)
+        public void SendChatMessage(string who, string message)
         {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
+            string name = Context.User.Identity.Name;
+
+            Clients.Group(who).SendAsync(name + ": " + message);
+        }
+
+        public override Task OnConnectedAsync()
+        {
+            string name = Context.User.Identity.Name;
+
+            Groups.AddToGroupAsync(Context.ConnectionId, name);
+            return base.OnConnectedAsync();
         }
     }
 }
