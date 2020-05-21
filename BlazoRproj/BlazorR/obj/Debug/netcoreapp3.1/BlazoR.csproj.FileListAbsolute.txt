@@ -399,3 +399,9 @@ C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\zh
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Data.pdb
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Domain.pdb
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Posts.razor.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Pages\Posts.razor.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Pages\PostCreate.cshtml.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Pages\WartchPosts.cshtml.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\WartchPosts.razor.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Pages\WartchPosts.razor.g.cs

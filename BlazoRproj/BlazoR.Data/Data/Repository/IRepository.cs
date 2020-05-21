@@ -11,6 +11,5 @@ namespace BlazoR.Data.Data.Repository
         T GetElementById(long id);
         void Update(T obj);
         void DeleteById(long id);
-        void Save();
     }
 }

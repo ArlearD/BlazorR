@@ -1,5 +1,7 @@
 ﻿using BlazoR.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BlazoR.Data.Data.Repository
 {
@@ -14,32 +16,31 @@ namespace BlazoR.Data.Data.Repository
 
         public void Create(Post obj)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Posts.Add(obj);
+            _dbContext.SaveChanges();
         }
 
         public void DeleteById(long id)
         {
-            throw new System.NotImplementedException();
+            var obj = GetElementById(id);
+            if (obj != null)
+                _dbContext.Posts.Remove(obj);
+            _dbContext.SaveChanges();
         }
 
         public List<Post> GetAlElements()
         {
-            throw new System.NotImplementedException();
+            return _dbContext.Posts.ToList();
         }
 
         public Post GetElementById(long id)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void Save()
-        {
-            throw new System.NotImplementedException();
+            return _dbContext.Posts.Find(id);
         }
 
         public void Update(Post obj)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Entry(obj).State = EntityState.Modified;
         }
     }
 }
