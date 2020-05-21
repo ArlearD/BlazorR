@@ -16,13 +16,19 @@ namespace BlazoR.Data
         }
 
 
-        public DbSet<Post> Posts { get; set; }
-
+        public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Post>().HasKey(i => i.Id);
+            builder.Entity<Post>()
+                .HasMany(c => c.Comments)
+                .WithOne(p => p.Post)
+                .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<Comment>()
+                .HasOne(p => p.Post)
+                .WithMany(c => c.Comments);
             base.OnModelCreating(builder);
         }
     }

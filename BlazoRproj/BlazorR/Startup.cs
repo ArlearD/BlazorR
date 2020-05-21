@@ -50,6 +50,7 @@ namespace BlazoR
 
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<PostService>();
+            services.AddScoped<CommentService>();
             services.AddSignalR();
         }
 

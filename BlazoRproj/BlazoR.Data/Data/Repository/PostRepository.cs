@@ -28,7 +28,7 @@ namespace BlazoR.Data.Data.Repository
             _dbContext.SaveChanges();
         }
 
-        public List<Post> GetAlElements()
+        public List<Post> GetAllElements()
         {
             return _dbContext.Posts.ToList();
         }

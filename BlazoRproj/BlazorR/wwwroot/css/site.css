@@ -1,5 +1,18 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.card {
+    display:inline-block;
+    background-color: ghostwhite;
+    border: none;
+}
+
+.img{
+    max-width: 500px;
+    max-height: 700px;
+    min-width:500px;
+    min-height:700px;
+}
+
 .open-button {
     background-color: #555;
     color: white;

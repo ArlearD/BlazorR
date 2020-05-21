@@ -404,3 +404,4 @@ C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Ra
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Shared\_LoginPartial.cshtml.g.cs

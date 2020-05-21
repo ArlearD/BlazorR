@@ -22,7 +22,7 @@ namespace BlazoR.Shared
         }
         public List<Post> GetPosts()
         {
-            return repository.GetAlElements();
+            return repository.GetAllElements();
         }
 
         public void CreatePost(Post post)

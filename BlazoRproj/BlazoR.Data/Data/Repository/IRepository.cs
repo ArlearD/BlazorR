@@ -6,7 +6,7 @@ namespace BlazoR.Data.Data.Repository
 {
     public interface IRepository<T> where T : class
     {
-        List<T> GetAlElements();
+        List<T> GetAllElements();
         void Create(T obj);
         T GetElementById(long id);
         void Update(T obj);
