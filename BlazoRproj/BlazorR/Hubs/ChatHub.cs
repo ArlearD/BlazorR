@@ -1,18 +1,20 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.Connections;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BlazoR.Hubs
 {
     public class ChatHub : Hub
     {
+        private readonly IHttpContextAccessor _accessor;
+        public ChatHub(IHttpContextAccessor accessor)
+        {
+            _accessor = accessor;
+        }
         public async Task SendMessage(string message)
         {
-            string user = Context.User.Identity.Name;
+            string user = _accessor.HttpContext.User.Identity.Name;
 
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }

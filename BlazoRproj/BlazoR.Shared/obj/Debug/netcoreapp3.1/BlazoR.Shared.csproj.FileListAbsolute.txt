@@ -1,0 +1,14 @@
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.csprojAssemblyReference.cache
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.AssemblyInfoInputs.cache
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.AssemblyInfo.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Shared.deps.json
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Shared.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Shared.pdb
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Data.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Domain.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Data.pdb
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\bin\Debug\netcoreapp3.1\BlazoR.Domain.pdb
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.csproj.CopyComplete
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazoR.Shared\obj\Debug\netcoreapp3.1\BlazoR.Shared.pdb

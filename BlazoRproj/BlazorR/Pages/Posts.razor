@@ -1,19 +1,75 @@
 ﻿@page "/posts"
-@using BlazoR.Domain.Models
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
 
-@*@foreach (var item in collection)
-{
+<div class="form-group">
+    <label>
+        Message:
+        <input @bind="messageInput" size="50" />
+    </label>
+</div>
+<button @onclick="Send" disabled="@(!IsConnected)">Send</button>
 
-}*@
-<div class="container-fluid">
-    <div class="row">
-        <p>
-            <img src="https://avatars.mds.yandex.net/get-pdb/1738868/f6a93b57-93f5-42ee-bb54-2e39a5b0af34/s1200" border="0">
-        </p>
-    </div>
+<hr>
+
+<ul id="messagesList">
+    @foreach (var message in messages)
+    {
+        <li>@message</li>
+    }
+</ul>
+
+<button class="open-button" @onclick="OpenChat">Chat</button>
+
+<div style="display:@ChatState" class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" @onclick="CloseChat">Close</button>
+    </form>
 </div>
 
-@code{
-    //List<Post> posts = ;
+@code {
 
+    public string ChatState = "none";
+    private HubConnection hubConnection;
+    private List<string> messages = new List<string>();
+    private string messageInput;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/chatHub"))
+            .Build();
+
+        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        {
+            var encodedMsg = $"{user}: {message}";
+            messages.Add(encodedMsg);
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+    }
+
+    Task Send() =>
+        hubConnection.SendAsync("SendMessage", messageInput);
+
+    public bool IsConnected =>
+        hubConnection.State == HubConnectionState.Connected;
+
+
+    private void OpenChat()
+    {
+        ChatState = "block";
+    }
+
+    private void CloseChat()
+    {
+        ChatState = "none";
+    }
 }

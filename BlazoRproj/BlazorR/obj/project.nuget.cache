@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/iw8oHbroSPt+Ph2sftW9OpUNY1CnximO4uuspdvHLmfuoFlOn7m5b9Spz2wenhO6t1LP1zNnGiBPUX9NadpJg==",
+  "dgSpecHash": "GZpiZBh/0crdIXIGiZrOogZEH9jO8enwSyJ9Zp8GppuIXb86IQSyrebGVr5Ozp6ORcQ71oylLjNVeT69zujLZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazorR\\BlazoR.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dima\\.nuget\\packages\\bootstrap\\4.5.0\\bootstrap.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.4\\microsoft.aspnetcore.connections.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",
@@ -76,6 +78,7 @@
     "C:\\Users\\Dima\\.nuget\\packages\\npgsql\\4.1.3\\npgsql.4.1.3.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\3.1.3\\npgsql.entityframeworkcore.postgresql.3.1.3.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
+    "C:\\Users\\Dima\\.nuget\\packages\\popper.js\\1.16.0\\popper.js.1.16.0.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

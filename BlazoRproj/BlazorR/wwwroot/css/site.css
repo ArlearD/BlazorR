@@ -1,5 +1,75 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+    /* Full-width textarea */
+    .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+    }
+
+        /* When the textarea gets focus, do something */
+        .form-container textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -21,7 +91,6 @@ app {
 }
 
 .top-row {
-    height: 3.5rem;
     display: flex;
     align-items: center;
 }
@@ -47,7 +116,7 @@ app {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, rgb(0, 49, 83) 224%, #00BFFF 280%);
 }
 
     .sidebar .top-row {
@@ -134,50 +203,4 @@ app {
     position: absolute;
     right: 0.75rem;
     top: 0.5rem;
-}
-
-@media (max-width: 767.98px) {
-    .main .top-row:not(.auth) {
-        display: none;
-    }
-
-    .main .top-row.auth {
-        justify-content: space-between;
-    }
-
-    .main .top-row a, .main .top-row .btn-link {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 768px) {
-    app {
-        flex-direction: row;
-    }
-
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .main .top-row {
-        position: sticky;
-        top: 0;
-    }
-
-    .main > div {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-
-    .sidebar .collapse {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
-    }
 }

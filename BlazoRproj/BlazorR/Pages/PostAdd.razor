@@ -1,0 +1,51 @@
+﻿@page "/postAdd"
+
+@using BlazoR.Shared
+@using BlazoR.Domain.Models
+@inject PostService PostService
+
+    <div class="container">
+        <p>
+            <b>Заголовок:</b><br />
+            <input class="form-control" @bind="Header" size="50" />
+        </p>
+        <p>
+            <b>Ссылка на изображение:</b><br />
+            <input class="form-control" @bind="ImageUrl" size="50" />
+        </p>
+        <p>
+            <b>Содержимое:</b><br />
+            <input class="form-control" @bind="Text" size="50" />
+        </p>
+        <button class="btn btn-primary" @onclick="Create">Create</button>
+        <br />
+        <br />
+        <h1>Просмотр</h1>
+
+    </div>
+
+
+
+
+
+
+
+@code {
+    private string Header;
+    private string ImageUrl;
+    private string Text;
+
+    public void Create()
+    {
+        Post newPost = new Post(){
+            Header = this.Header,
+            ImageURL = this.ImageUrl,
+            Text = this.Text
+        };
+
+        Header = "";
+        ImageUrl = "";
+        Text = "";
+        PostService.CreatePost(newPost);
+    }
+}

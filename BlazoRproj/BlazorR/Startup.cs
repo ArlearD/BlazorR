@@ -1,6 +1,7 @@
 using BlazoR.Areas.Identity;
 using BlazoR.Data;
 using BlazoR.Hubs;
+using BlazoR.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -37,7 +38,6 @@ namespace BlazoR
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddSignalR();
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
@@ -47,7 +47,10 @@ namespace BlazoR
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+
             services.AddSingleton<WeatherForecastService>();
+            services.AddScoped<PostService>();
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

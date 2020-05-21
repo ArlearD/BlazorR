@@ -1,44 +1,34 @@
-﻿using BlazoR.Data.Data.Repository;
+﻿using BlazoR.Data;
+using BlazoR.Data.Data.Repository;
 using BlazoR.Domain.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Linq;
+using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace BlazoR.Shared
 {
     public class PostService
     {
-        
-        private readonly PostRepository repository = new PostRepository(dbContext);
-        public Task<Post[]> GetPostsAsync(int page)
+        private readonly IHttpContextAccessor _accessor;
+        private readonly PostRepository repository;
+        public PostService(IHttpContextAccessor accessor, ApplicationDbContext context)
         {
-            return Task.FromResult(Enumerable.Range(1, 5).Select(index => new Post
-            {
-                Header = "NH",
-                Id = 3,
-                ImageURL = "SS",
-                Sender = "ME",
-                Text = "nyll"
-            }).ToArray());
+            _accessor = accessor;
+            repository = new PostRepository(context);
         }
-    }
-
-    public class WeatherForecastService
-    {
-        private static readonly string[] Summaries = new[]
+        public List<Post> GetPosts()
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+            return repository.GetAlElements();
+        }
 
-        public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
+        public void CreatePost(Post post)
         {
-            var rng = new Random();
-            return Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = startDate.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            }).ToArray());
+            post.Sender = _accessor.HttpContext.User.Identity.Name;
+            repository.Create(post);
         }
     }
 }

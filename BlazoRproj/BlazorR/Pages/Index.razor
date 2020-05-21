@@ -1,48 +1,71 @@
 ﻿@page "/"
-@using Microsoft.AspNetCore.SignalR.Client
-@inject NavigationManager NavigationManager
 
-<div class="form-group">
-    <label>
-        Message:
-        <input @bind="messageInput" size="50" />
-    </label>
+@using BlazoR.Shared
+@using BlazoR.Domain.Models
+@inject PostService PostService
+
+<div class="container">
+    @foreach (var post in posts)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@post.Header</h5>
+                <p class="card-text">@post.Text</p>
+                <p class="card-text"><small class="text-muted">@post.Sender</small></p>
+            </div>
+            <img class="card-img-bottom" src="@post.ImageURL" alt="Card image cap">
+        </div>
+
+        <hr />
+    }
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" @onclick="PreviousPage">Previous</a>
+            </li>
+
+            <li class="page-item"><a class="page-link" href="#">@currentPage</a></li>
+
+            <li class="page-item">
+                <a class="page-link" @onclick="NextPage">Next</a>
+            </li>
+        </ul>
+    </nav>
 </div>
-<button @onclick="Send" disabled="@(!IsConnected)">Send</button>
 
-<hr>
 
-<ul id="messagesList">
-    @foreach (var message in messages)
+
+
+
+
+@code{
+    int currentPage = 1;
+    const int pagesCount = 10;
+
+    List<Post> posts;
+
+    protected void PreviousPage()
     {
-        <li>@message</li>
-    }
-</ul>
-
-@code {
-    private HubConnection hubConnection;
-    private List<string> messages = new List<string>();
-    private string messageInput;
-
-    protected override async Task OnInitializedAsync()
-    {
-        hubConnection = new HubConnectionBuilder()
-            .WithUrl(NavigationManager.ToAbsoluteUri("/chatHub"))
-            .Build();
-
-        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        if (currentPage > 1)
         {
-            var encodedMsg = $"{user}: {message}";
-            messages.Add(encodedMsg);
-            StateHasChanged();
-        });
-
-        await hubConnection.StartAsync();
+            currentPage--;
+        }
     }
 
-    Task Send() =>
-        hubConnection.SendAsync("SendMessage", messageInput);
+    protected void NextPage()
+    {
+        if (posts.Count == pagesCount)
+        {
+            currentPage++;
+        }
 
-    public bool IsConnected =>
-        hubConnection.State == HubConnectionState.Connected;
+    }
+
+    protected override void OnInitialized()
+    {
+        posts = PostService.GetPosts();
+        base.OnInitialized();
+    }
 }
