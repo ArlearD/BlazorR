@@ -65,9 +65,10 @@
                         <input required @bind="myComment" />
                         <button class="btn btn-secondary" @onclick="@(e => SendNewComment(post, context.User.Identity.Name))">Отправить</button>
                     }
-                    <hr />
+
                 </Authorized>
-            </AuthorizeView>
+            </AuthorizeView> 
+            <hr />
         }
 
         <nav aria-label="Page navigation example">
