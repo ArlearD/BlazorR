@@ -2,9 +2,7 @@
 using BlazoR.Data.Data.Repository;
 using BlazoR.Domain.Models;
 using Microsoft.AspNetCore.Http;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BlazoR.Shared
 {
@@ -22,6 +20,18 @@ namespace BlazoR.Shared
         public List<Comment> GetComments(Post post)
         {
             return repository.GetPostComments(post);
+        }
+
+        public void AddNewComment(string text, Post post)
+        {
+            Comment comment = new Comment()
+            {
+                Post = post,
+                Sender = _accessor.HttpContext.User.Identity.Name,
+                Text = text
+            };
+
+            repository.Create(comment);
         }
     }
 }

@@ -2,12 +2,7 @@
 using BlazoR.Data.Data.Repository;
 using BlazoR.Domain.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Collections.Generic;
-using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace BlazoR.Shared
 {

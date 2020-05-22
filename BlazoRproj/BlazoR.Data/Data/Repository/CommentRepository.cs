@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace BlazoR.Data.Data.Repository
@@ -46,7 +47,9 @@ namespace BlazoR.Data.Data.Repository
 
         public List<Comment> GetPostComments(Post post)
         {
-            return _dbContext.Posts.Find(post).Comments;
+            return _dbContext.Posts
+                .SelectMany(p => p.Comments)
+                .ToList();
         }
     }
 }
