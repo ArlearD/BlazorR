@@ -4,92 +4,90 @@
 @using BlazoR.Domain.Models
 @inject PostService PostService
 
-    <AuthorizeView>
-        <Authorized>
-            <div>
-                <p>
-                    <b>Заголовок:</b><br />
-                    <input required class="form-control" @bind="Header" size="50" />
-                </p>
-                <p>
-                    <b>Ссылка на изображение:</b>
-                    <br />
-                    <button @onclick="CreateNewImageInput" class="btn btn-secondary">Добавить изображение</button>
-                    @if (ImageUrls.Count != 0)
-                    {
-                        <button @onclick="DeleteLastImageInput" class="btn btn-danger">Отменить</button>
-                    }
-                    <br />
-                    <input class="form-control" @bind="Url" size="50" />
-                    <br />
-                    <b>Добавленные:</b><br />
-                    @foreach (var item in ImageUrls)
-                    {
-                        @item;
-                        <br />
-                    }
-                </p>
-                <p>
-                    <b>Содержимое:</b><br />
-                    <textarea class="form-control" @bind="Text" size="50" />
-                </p>
-                <button class="btn btn-primary" @onclick="@(e => Create(context.User.Identity.Name))">Создать</button>
-                @if (PostCreated)
-                {
-                    <h6 style="color:forestgreen">Пост создан</h6>
-                }
-
+<AuthorizeView>
+    <Authorized>
+        <div class="container-fluid">
+            <p>
+                <b>Заголовок:</b><br />
+                <input required  @bind="Header" />
+            </p>
+            <p>
+                <b>Ссылка на изображение:</b>
                 <br />
-                <div class="container">
-                    <h1>Просмотр</h1>
-                    <div class="card">
-                        <div class="card-body">
-                            <h1 class="card-title">@Header</h1>
-                            <p class="card-text">@Text</p>
-                            <p class="card-text"><small class="text-muted">@context.User.Identity.Name</small></p>
-                        </div>
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                @for (int i = 0; i < ImageUrls.Count; i++)
-                                {
-                                    if (0 == i)
-                                    {
-                                        <div class="carousel-item active">
-                                            <img class="img d-block w-100" src="@ImageUrls[i]">
-                                        </div>
-                                    }
-                                    else
-                                    {
-                                        <div class="img carousel-item">
-                                            <img class="d-block w-100" src="@ImageUrls[i]">
-                                        </div>
-                                    }
-                                }
-                            </div>
-                            @if (ImageUrls.Count > 1)
-                            {
-                                <a @onclick="PreviousImage" class="carousel-control-prev" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a @onclick="NextImage" class="carousel-control-next" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            }
+                <button @onclick="CreateNewImageInput" class="btn btn-secondary">Добавить изображение</button>
+                @if (ImageUrls.Count != 0)
+                {
+                    <button @onclick="DeleteLastImageInput" class="btn btn-danger">Отменить</button>
+                }
+                <br />
+                <input @bind="Url" size="50" />
+                <br />
+                <b>Добавленные:</b><br />
+                @foreach (var item in ImageUrls)
+                {
+                    @item;
+                    <br />
+                }
+            </p>
+            <p>
+                <b>Содержимое:</b><br />
+                <textarea @bind="Text" size="50" />
+            </p>
+            <button class="btn btn-primary" @onclick="@(e => Create(context.User.Identity.Name))">Создать</button>
+            <br />
+            @if (PostCreated)
+            {
+                <h6 style="color:forestgreen">Пост создан</h6>
+            }
 
-                        </div>
-                    </div>
+            <br />
+            <h1>Просмотр</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">@Header</h1>
+                    <p class="card-text">@Text</p>
+                    <p class="card-text"><small class="text-muted">@context.User.Identity.Name</small></p>
                 </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < ImageUrls.Count; i++)
+                        {
+                            if (0 == i)
+                            {
+                                <div class="carousel-item active">
+                                    <img class="img d-block w-100" src="@ImageUrls[i]">
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="img carousel-item">
+                                    <img class="d-block w-100" src="@ImageUrls[i]">
+                                </div>
+                            }
+                        }
+                    </div>
+                    @if (ImageUrls.Count > 1)
+                    {
+                        <a @onclick="PreviousImage" class="carousel-control-prev" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a @onclick="NextImage" class="carousel-control-next" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    }
 
+                </div>
             </div>
+        </div>
 
-        </Authorized>
-        <NotAuthorized>
-            <a href="authentication/register">Register</a>
-            <a href="authentication/login">Log in</a>
-        </NotAuthorized>
-    </AuthorizeView>
+    </Authorized>
+    <NotAuthorized>
+        <a href="authentication/register">Register</a>
+        <a href="authentication/login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
 
 
 
