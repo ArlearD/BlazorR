@@ -1,35 +1,34 @@
-﻿using BlazoR.Data;
-using BlazoR.Data.Data.Repository;
-using BlazoR.Domain.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using BlazoR.Data;
+using BlazoR.Domain.Models;
 
 namespace BlazoR.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostsController : ControllerBase
+    public class PostsApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly PostRepository repository;
 
-        public PostsController(ApplicationDbContext context)
+        public PostsApiController(ApplicationDbContext context)
         {
             _context = context;
-            repository = new PostRepository(context);
         }
 
-        // GET: api/Posts
+        // GET: api/PostsApi
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
         {
             return await _context.Posts.ToListAsync();
         }
 
-        // GET: api/Posts/5
+        // GET: api/PostsApi/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Post>> GetPost(long id)
         {
@@ -43,7 +42,7 @@ namespace BlazoR.Controllers
             return post;
         }
 
-        // PUT: api/Posts/5
+        // PUT: api/PostsApi/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -75,7 +74,7 @@ namespace BlazoR.Controllers
             return NoContent();
         }
 
-        // POST: api/Posts
+        // POST: api/PostsApi
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -87,7 +86,7 @@ namespace BlazoR.Controllers
             return CreatedAtAction("GetPost", new { id = post.Id }, post);
         }
 
-        // DELETE: api/Posts/5
+        // DELETE: api/PostsApi/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Post>> DeletePost(long id)
         {

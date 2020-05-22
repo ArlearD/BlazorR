@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoR.Data", "BlazoR.Data\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoR.NUnit", "BlazoR.NUnit\BlazoR.NUnit.csproj", "{D9802278-4F9F-4ED4-8F3F-B76027D6464F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoR.Shared", "BlazoR.Shared\BlazoR.Shared.csproj", "{E9BBAE38-09DC-4C78-934D-7D9BF0CC6A31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoR.Services", "BlazoR.Shared\BlazoR.Services.csproj", "{E9BBAE38-09DC-4C78-934D-7D9BF0CC6A31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

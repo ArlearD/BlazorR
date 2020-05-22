@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4UxcwUeSlHYfT8hPVG0YM4gecgwy3LCbHtUFnqV+0RZ2DRzCSp9UvGyKzWFoIhMvybLV5YHsGc63/x86L0ktAw==",
+  "dgSpecHash": "dFpzrjdD3AOgRDTpH9yWmE89xvAP33ZfBlmHrydquJp02IvYoiXchNgLB3UzUxih5kr3fsc7oJtj67Qu2Gnx/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Shared.csproj",
+  "projectFilePath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",

@@ -3110,7 +3110,7 @@
           "bin/placeholder/BlazoR.Domain.dll": {}
         }
       },
-      "BlazoR.Shared/1.0.0": {
+      "BlazoR.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -3118,10 +3118,10 @@
           "BlazoR.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/BlazoR.Shared.dll": {}
+          "bin/placeholder/BlazoR.Services.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BlazoR.Shared.dll": {}
+          "bin/placeholder/BlazoR.Services.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -9665,17 +9665,17 @@
       "path": "../BlazoR.Domain/BlazoR.Domain.csproj",
       "msbuildProject": "../BlazoR.Domain/BlazoR.Domain.csproj"
     },
-    "BlazoR.Shared/1.0.0": {
+    "BlazoR.Services/1.0.0": {
       "type": "project",
-      "path": "../BlazoR.Shared/BlazoR.Shared.csproj",
-      "msbuildProject": "../BlazoR.Shared/BlazoR.Shared.csproj"
+      "path": "../BlazoR.Shared/BlazoR.Services.csproj",
+      "msbuildProject": "../BlazoR.Shared/BlazoR.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BlazoR.Data >= 1.0.0",
       "BlazoR.Domain >= 1.0.0",
-      "BlazoR.Shared >= 1.0.0",
+      "BlazoR.Services >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.4",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.4",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.4",
@@ -9720,8 +9720,8 @@
             "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Domain\\BlazoR.Domain.csproj": {
               "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Domain\\BlazoR.Domain.csproj"
             },
-            "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Shared.csproj": {
-              "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Shared.csproj"
+            "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj": {
+              "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj"
             }
           }
         }

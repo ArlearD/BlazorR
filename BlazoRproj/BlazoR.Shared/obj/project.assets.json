@@ -985,9 +985,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Shared.csproj",
-      "projectName": "BlazoR.Shared",
-      "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj",
+      "projectName": "BlazoR.Services",
+      "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj",
       "packagesPath": "C:\\Users\\Dima\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\obj\\",
       "projectStyle": "PackageReference",

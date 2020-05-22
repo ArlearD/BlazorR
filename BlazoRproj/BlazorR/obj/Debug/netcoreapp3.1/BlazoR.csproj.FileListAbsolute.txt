@@ -384,8 +384,6 @@ C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\zh
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Data.pdb
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Domain.pdb
-C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Shared.dll
-C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Shared.pdb
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\PostAdd.razor.g.cs
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\BlazoR.csproj.CoreCompileInputs.cache
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\BlazoR.MvcApplicationPartsAssemblyInfo.cs
@@ -405,3 +403,5 @@ C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Ra
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Chat.razor.g.cs
 C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\obj\Debug\netcoreapp3.1\Razor\Pages\Chat.razor.g.cs
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Services.dll
+C:\Users\Dima\source\repos\BlazorR\BlazoRproj\BlazorR\bin\Debug\netcoreapp3.1\BlazoR.Services.pdb

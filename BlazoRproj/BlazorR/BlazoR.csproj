@@ -24,7 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BlazoR.Data\BlazoR.Data.csproj" />
     <ProjectReference Include="..\BlazoR.Domain\BlazoR.Domain.csproj" />
-    <ProjectReference Include="..\BlazoR.Shared\BlazoR.Shared.csproj" />
+    <ProjectReference Include="..\BlazoR.Shared\BlazoR.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -26,7 +26,7 @@
         "dependencies": {
           "BlazoR.Data": "1.0.0",
           "BlazoR.Domain": "1.0.0",
-          "BlazoR.Shared": "1.0.0",
+          "BlazoR.Services": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.4",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
           "Microsoft.AspNetCore.Identity.UI": "3.1.4",
@@ -2648,16 +2648,16 @@
           "BlazoR.Domain.dll": {}
         }
       },
-      "BlazoR.Shared/1.0.0": {
+      "BlazoR.Services/1.0.0": {
         "dependencies": {
           "BlazoR.Data": "1.0.0",
           "BlazoR.Domain": "1.0.0"
         },
         "runtime": {
-          "BlazoR.Shared.dll": {}
+          "BlazoR.Services.dll": {}
         },
         "compile": {
-          "BlazoR.Shared.dll": {}
+          "BlazoR.Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5517,7 +5517,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BlazoR.Shared/1.0.0": {
+    "BlazoR.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
