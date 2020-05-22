@@ -46,6 +46,9 @@
                 </div>
             </div>
             <br />
+            <AuthorizeView Roles="admin">
+                <button class="btn btn-danger" @onclick="@(e => DeletePost(post))">Удалить пост</button>
+            </AuthorizeView>
             <AuthorizeView>
                 <Authorized>
                     <button class="btn btn-primary" @onclick="@(e => OpenComments(post))">Комментарии</button>
@@ -67,7 +70,7 @@
                     }
 
                 </Authorized>
-            </AuthorizeView> 
+            </AuthorizeView>
             <hr />
         }
 
@@ -103,6 +106,11 @@
         {
             currentPage--;
         }
+    }
+
+    protected void DeletePost(Post post)
+    {
+        PostService.DeletePost(post);
     }
 
     protected void PreviousImage(Post post)

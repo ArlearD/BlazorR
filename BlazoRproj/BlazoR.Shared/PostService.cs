@@ -24,5 +24,10 @@ namespace BlazoR.Shared
         {
             repository.Create(post);
         }
+
+        public void DeletePost(Post post)
+        {
+            repository.DeleteById(post.Id);
+        }
     }
 }
