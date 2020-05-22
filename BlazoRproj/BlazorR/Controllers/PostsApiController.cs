@@ -21,14 +21,12 @@ namespace BlazoR.Controllers
             _context = context;
         }
 
-        // GET: api/PostsApi
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
         {
             return await _context.Posts.ToListAsync();
         }
 
-        // GET: api/PostsApi/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Post>> GetPost(long id)
         {
@@ -42,9 +40,6 @@ namespace BlazoR.Controllers
             return post;
         }
 
-        // PUT: api/PostsApi/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPost(long id, Post post)
         {
@@ -74,9 +69,6 @@ namespace BlazoR.Controllers
             return NoContent();
         }
 
-        // POST: api/PostsApi
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Post>> PostPost(Post post)
         {
@@ -86,7 +78,6 @@ namespace BlazoR.Controllers
             return CreatedAtAction("GetPost", new { id = post.Id }, post);
         }
 
-        // DELETE: api/PostsApi/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Post>> DeletePost(long id)
         {

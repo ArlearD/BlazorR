@@ -175,15 +175,23 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.4.0, )"
+              "version": "[16.6.1, )"
             },
-            "NUnit3TestAdapter": {
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.15.1, )"
+              "version": "[1.2.1, )"
             },
-            "nunit": {
+            "xunit": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [

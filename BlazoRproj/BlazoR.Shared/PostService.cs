@@ -8,13 +8,13 @@ namespace BlazoR.Shared
 {
     public class PostService
     {
-        private readonly IHttpContextAccessor _accessor;
         private readonly PostRepository repository;
-        public PostService(IHttpContextAccessor accessor, ApplicationDbContext context)
+
+        public PostService(ApplicationDbContext sharedDatabase)
         {
-            _accessor = accessor;
-            repository = new PostRepository(context);
+            repository = new PostRepository(sharedDatabase);
         }
+
         public List<Post> GetPosts()
         {
             return repository.GetAllElements();
@@ -22,7 +22,6 @@ namespace BlazoR.Shared
 
         public void CreatePost(Post post)
         {
-            post.Sender = _accessor.HttpContext.User.Identity.Name;
             repository.Create(post);
         }
     }

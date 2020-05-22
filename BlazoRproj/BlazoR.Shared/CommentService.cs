@@ -8,12 +8,10 @@ namespace BlazoR.Shared
 {
     public class CommentService
     {
-        private readonly IHttpContextAccessor _accessor;
         private readonly CommentRepository repository;
 
-        public CommentService(IHttpContextAccessor accessor, ApplicationDbContext context)
+        public CommentService(ApplicationDbContext context)
         {
-            _accessor = accessor;
             repository = new CommentRepository(context);
         }
 
@@ -22,12 +20,12 @@ namespace BlazoR.Shared
             return repository.GetPostComments(post);
         }
 
-        public void AddNewComment(string text, Post post)
+        public void AddNewComment(string text, Post post, string userName)
         {
             Comment comment = new Comment()
             {
                 Post = post,
-                Sender = _accessor.HttpContext.User.Identity.Name,
+                Sender = userName,
                 Text = text
             };
 
