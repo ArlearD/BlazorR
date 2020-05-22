@@ -47,9 +47,11 @@ namespace BlazoR.Data.Data.Repository
 
         public List<Comment> GetPostComments(Post post)
         {
-            return _dbContext.Posts
+            var a = _dbContext.Posts
                 .SelectMany(p => p.Comments)
+                .Where(c => c.Post.Id == post.Id)
                 .ToList();
+            return a;
         }
     }
 }
