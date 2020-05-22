@@ -1,0 +1,76 @@
+﻿@page "/chat"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
+
+@if (IsConnected)
+{
+    <button class="open-button" @onclick="OpenChat">Chat</button>
+
+    <div style="display:@ChatState" class="chat-popup">
+        <div class="form-container">
+            <h1>SignalR Chat</h1>
+            <div class="chatScrollWindow">
+                <ul id="messagesList">
+                    @foreach (var message in messages)
+                    {
+                        <li>@message</li>
+                    }
+                </ul>
+            </div>
+            Message:
+            <br />
+            <input @bind="messageInput" />
+            <br />
+            <br />
+            <button @onclick="Send" disabled="@(!IsConnected)" class="btn btn-primary">Send</button>
+            <button class="btn btn-danger" @onclick="CloseChat">Close</button>
+        </div>
+    </div>
+}
+
+
+@code {
+    [Parameter]
+    public string CurrentUserName { get; set; }
+
+    public string ChatState = "none";
+    private HubConnection hubConnection;
+    private List<string> messages = new List<string>();
+    private string messageInput;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/chatHub"))
+            .Build();
+
+        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        {
+            var encodedMsg = $"{user}: {message}";
+            messages.Add(encodedMsg);
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+    }
+
+    async Task Send()
+    {
+        await hubConnection.SendAsync("SendMessage", CurrentUserName, messageInput);
+        messageInput = "";
+    }
+
+    public bool IsConnected =>
+        hubConnection.State == HubConnectionState.Connected;
+
+
+    private void OpenChat()
+    {
+        ChatState = "block";
+    }
+
+    private void CloseChat()
+    {
+        ChatState = "none";
+    }
+}

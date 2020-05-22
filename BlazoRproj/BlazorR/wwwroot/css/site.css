@@ -1,5 +1,14 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.chatScrollWindow {
+    display: inline-block;
+    height: 300px;
+    width: 280px;
+    background: #fff;
+    border: 1px solid #C1C1C1;
+    overflow-y: scroll;
+}
+
 .card {
     display:inline-block;
     background-color: ghostwhite;
@@ -62,7 +71,6 @@
 
     /* Set a style for the submit/send button */
     .form-container .btn {
-        background-color: #4CAF50;
         color: white;
         padding: 16px 20px;
         border: none;

@@ -7,15 +7,8 @@ namespace BlazoR.Hubs
 {
     public class ChatHub : Hub
     {
-        private readonly IHttpContextAccessor _accessor;
-        public ChatHub(IHttpContextAccessor accessor)
+        public async Task SendMessage(string user, string message)
         {
-            _accessor = accessor;
-        }
-        public async Task SendMessage(string message)
-        {
-            string user = _accessor.HttpContext.User.Identity.Name;
-
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
 
