@@ -1989,10 +1989,7 @@
         },
         "runtime": {
           "bin/placeholder/BlazoR.Data.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "BlazoR.Domain/1.0.0": {
         "type": "project",
@@ -2016,10 +2013,7 @@
         },
         "runtime": {
           "bin/placeholder/BlazoR.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -6577,19 +6571,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dima\\.nuget\\packages\\": {}
+    "C:\\Users\\Arleard\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.NUnit\\BlazoR.NUnit.csproj",
+      "projectUniqueName": "C:\\Users\\Arleard\\Documents\\GitHub\\BlazorR\\BlazoRproj\\BlazoR.NUnit\\BlazoR.NUnit.csproj",
       "projectName": "BlazoR.NUnit",
-      "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.NUnit\\BlazoR.NUnit.csproj",
-      "packagesPath": "C:\\Users\\Dima\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.NUnit\\obj\\",
+      "projectPath": "C:\\Users\\Arleard\\Documents\\GitHub\\BlazorR\\BlazoRproj\\BlazoR.NUnit\\BlazoR.NUnit.csproj",
+      "packagesPath": "C:\\Users\\Arleard\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Arleard\\Documents\\GitHub\\BlazorR\\BlazoRproj\\BlazoR.NUnit\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Arleard\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6602,8 +6596,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj": {
-              "projectPath": "C:\\Users\\Dima\\source\\repos\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj"
+            "C:\\Users\\Arleard\\Documents\\GitHub\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj": {
+              "projectPath": "C:\\Users\\Arleard\\Documents\\GitHub\\BlazorR\\BlazoRproj\\BlazoR.Shared\\BlazoR.Services.csproj"
             }
           }
         }
@@ -6656,7 +6650,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
